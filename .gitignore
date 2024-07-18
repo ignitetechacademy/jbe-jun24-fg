@@ -4,3 +4,5 @@
 .metadata/version.ini
 /.metadata/
 *.class
+QuickCheck/.project
+QuickCheck/.settings/org.eclipse.core.resources.prefs
