@@ -4,41 +4,42 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class ExploreThreadExtension {
+public class ExploreThreadExtensionOddEven {
 
 	public static void main(String[] args) {
 		System.out.println(Thread.currentThread().getName());
 
 		List<Integer> salaries = Arrays.asList(1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000);
-		int halfListSize = salaries.size() / 2;
 
-		List<Integer> salariesFirstHalf = salaries.subList(0, halfListSize);
-		System.out.println(salariesFirstHalf);
-		List<Integer> salariesSecondHalf = salaries.subList(halfListSize, salaries.size());
-		System.out.println(salariesSecondHalf);
-
-		Payroll p = new Payroll(salariesFirstHalf);
+		EmpPayroll p = new EmpPayroll(salaries, 0);
+		p.setName("giri");
 		p.start();
 
-		Payroll p2 = new Payroll(salariesSecondHalf);
+		EmpPayroll p2 = new EmpPayroll(salaries, 1);
+		p2.setName("krish");
 		p2.start();
 
 		System.out.println("Thread ccreation completed ..");
 	}
 }
 
-class Payroll extends Thread {
+class EmpPayroll extends Thread {
 	List<Integer> salariesList;
+	int index;
 
-	public Payroll(List<Integer> salariesList) {
+	public EmpPayroll(List<Integer> salariesList, int index) {
 		super();
 		this.salariesList = salariesList;
+		this.index = index;
 	}
 
 	@Override
 	public void run() {
 		System.out.println(Thread.currentThread().getName());
-		for (Integer salary : salariesList) {
+		for (int i = index; i < salariesList.size(); i = i + 2) {
+
+			// for (Integer salary : salariesList) {
+			int salary = salariesList.get(i);
 			System.out.println(Thread.currentThread().getName() + " - " + (salary + (salary * 10 / 100)));
 
 			try {
