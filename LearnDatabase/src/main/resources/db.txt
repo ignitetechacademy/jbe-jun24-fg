@@ -1,0 +1,13 @@
+CREATE TABLE public.accounts
+(
+    acc_id integer,
+    acc_holder_name character varying(50) NOT NULL,
+    acc_holder_number bigint NOT NULL,
+    acc_balance double precision,
+    PRIMARY KEY (acc_id)
+);
+
+ALTER TABLE IF EXISTS public.accounts
+    OWNER to postgres;
+    
+----------------------------------------------------
