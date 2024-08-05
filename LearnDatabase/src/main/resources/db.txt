@@ -11,3 +11,15 @@ ALTER TABLE IF EXISTS public.accounts
     OWNER to postgres;
     
 ----------------------------------------------------
+
+CREATE PROCEDURE public.bank_std_account(IN opn_bal integer DEFAULT 0)
+LANGUAGE 'sql'
+AS $BODY$
+UPDATE public.accounts SET acc_balance=opn_bal
+$BODY$;
+ALTER PROCEDURE public.bank_std_account(integer)
+    OWNER TO postgres;
+    
+
+CALL public.bank_std_account()    
+CALL public.bank_std_account(1750)
