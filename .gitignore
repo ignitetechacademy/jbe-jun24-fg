@@ -16,3 +16,7 @@ LearnDatabase/.settings/org.eclipse.jdt.apt.core.prefs
 LearnDatabase/.settings/org.eclipse.jdt.core.prefs
 LearnDatabase/.settings/org.eclipse.m2e.core.prefs
 /LearnDatabase/target
+LearnWeb/.classpath
+LearnWeb/.project
+/LearnWeb/.settings
+/Servers
