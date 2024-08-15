@@ -9,4 +9,54 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>CreateAccountServlet</display-name>
+    <servlet-name>CreateAccountServlet</servlet-name>
+    <servlet-class>com.lern.web.servlets.CreateAccountServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateAccountServlet</servlet-name>
+    <url-pattern>/create</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RetrieveAccountsServlet</display-name>
+    <servlet-name>RetrieveAccountsServlet</servlet-name>
+    <servlet-class>com.lern.web.servlets.RetrieveAccountsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RetrieveAccountsServlet</servlet-name>
+    <url-pattern>/fetch</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdateAccountServlet</display-name>
+    <servlet-name>UpdateAccountServlet</servlet-name>
+    <servlet-class>com.lern.web.servlets.UpdateAccountServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateAccountServlet</servlet-name>
+    <url-pattern>/update</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>FetchAccountServlet</display-name>
+    <servlet-name>FetchAccountServlet</servlet-name>
+    <servlet-class>com.lern.web.servlets.FetchAccountServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FetchAccountServlet</servlet-name>
+    <url-pattern>/fetchAccount</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DespositServlet</display-name>
+    <servlet-name>DespositServlet</servlet-name>
+    <servlet-class>com.lern.web.servlets.DespositServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DespositServlet</servlet-name>
+    <url-pattern>/depositAmount</url-pattern>
+  </servlet-mapping>
 </web-app>
