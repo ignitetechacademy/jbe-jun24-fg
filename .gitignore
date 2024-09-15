@@ -33,3 +33,7 @@ LearnHibernate/.classpath
 LearnHibernate/.project
 /LearnHibernate/.settings
 /LearnHibernate/target
+LearnSpringHibenateIntegration/.classpath
+/LearnSpringHibenateIntegration/.settings
+/LearnSpringHibenateIntegration/target
+/SpringBootApp/.mvn
